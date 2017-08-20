@@ -1,0 +1,21 @@
+<p>
+  group-by works!
+</p>
+
+{{a | json}}
+<ul *ngFor="let b of a | derp ">
+<li style="font-size:24px;color:green">{{b.key }}</li>
+	  <span *ngFor="let c of b.value | derp ">
+		<p style="font-size:20px;color:red">{{c.key  }}</p>
+		 <span *ngFor="let d of c.value | derp ">
+		<p style="font-size:12px;color:blue">{{d.key }}
+		Tag: {{d.value[0].tag}} content : {{d.value[0].content}} </p>
+	</span>  
+	</span>  
+</ul>
+
+
+<!-- <ul *ngFor=" let entry of demo | derp">           
+  <li>Key: {{entry.key}}, value: {{entry.value}}</li>
+</ul>
+ -->
